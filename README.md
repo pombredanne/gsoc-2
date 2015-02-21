@@ -1,81 +1,65 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+## About Binjitsu
 
-- [Python-Only Enhancements](#python-only-enhancements)
-  - [Port Doctests to a Unit Testing Framework](#port-doctests-to-a-unit-testing-framework)
-  - [Extend Integration Testing Framework and Examples](#extend-integration-testing-framework-and-examples)
-  - [Overhaul / re-write of the `pwnlib.term` module](#overhaul--re-write-of-the-pwnlibterm-module)
-- [Exploitation Improvements](#exploitation-improvements)
-  - [Multi-arch support for `pwnlib.rop`](#multi-arch-support-for-pwnlibrop)
-  - [Porting Shellcode to Pwntools](#porting-shellcode-to-pwntools)
-  - [Shellcode Encoders](#shellcode-encoders)
-  - [SIGRET Exploitation Assitance](#sigret-exploitation-assitance)
-  - [Format String Payload Generation](#format-string-payload-generation)
+Tell the students a bit about your organization. Here's some questions you might want to answer:
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+### What is pwntools?
 
-This is a non-comprehensive list of general outstanding issues and "nice-to-haves" which affect both binjitsu and vanilla pwntools.
+`pwntools` is an open-source, MIT-licensed framework for automating and aiding in the development of exploits for Capture The Flag computer security competitions.
 
-## Python-Only Enhancements
+In particular, `pwntools` provides commonly-used functionality which are frequently re-implemented by exploit authors for each exploit, or copy-pasted around.  Additionally, it provides assistance in the exploit development process by automating some operations, or providing automated analysis and discovery about a program.
 
-These ideas only require knowledge of Python, and do not expect experience regarding binary exploitation or Capture the Flag.
+### Why is it interesting?
 
-### Port Doctests to a Unit Testing Framework
+Hollywood glamorizes hacking and hackers, but the truth is that computer security, vulnerability research, and exploit development are much more tedious than what's shown on the silver screen.  While we'll never reach a place where we have [crazy 3D cube exploit auto-generators][3], we can certainly strive to make each part easier, faster, and more enjoyable.
 
-Currently, all of the tests are run as part of a wrapper via `sphinx`.  This places a large number of restrictions on the tests, and requires manual addition to the corpus rather than automated test enumeration.  Ideally, test discovery would be automated, and handle both doctests and unit tests.  Both `nosetests` and `py.test` are excellent candidates for this, but there are expectations built into the current tests which preclude the use of these frameworks.
+[3]: https://www.youtube.com/watch?v=cmR3wIBJZbk
 
-### Extend Integration Testing Framework and Examples
+### Who uses it?
 
-There is also a [regression testing][2] framework that's designed to permit automatic testing of various parts of pwntools as a whole, rather than in bite-sized prepared chunks.  This regression testing code works, but it is not complete and does not give good coverage for all of the code.
+`pwntools` is widely used throughout the Capture the Flag and Wargames community.  It's primarily developed by the Gallopsled CTF team, which use it exclusively.  Its has spread among the community because of its ease of use and utility.
 
-The current [examples repository][1] is a bit outdated and doesn't work with the current incarnation of pwntools or binjitsu.  Unfortunately, new users have very little options to turn to when looking for a good starting point for "How do I pwntools".
+One of the common post-competition activities for CTF is to post a write-up of the challenge binary.  Generally, this includes an analysis of the binary, its vulnerabilities, and details on the exploitation process.  Searching Google for `"from pwn import"` yields about 1300 hits, almost all of which are unique write-ups from different authors.
 
-[1]: https://github.com/Gallopsled/pwntools-write-ups
-[2]: https://github.com/Gallopsled/pwntools-regression
+### What language is it written in?
 
-### Overhaul / re-write of the `pwnlib.term` module
+`pwntools` is written exclusively in Python.  Its dependencies are almost all written in Python, with the exception of `libcapstone` and dependencies on system binaries (e.g. `gcc`).
 
-This module is currently the least-well-understood module and in its current form isn't documented or tested.
+### How is it going to change the world?
 
-Re-implementing, or re-factoring the current implementation, should allow this module to be tested in an automated manner.
+`pwntools` is already an excellent resource for experienced competitors, but ideally would also be a teaching resource.  Many of the pitfalls that are encountered when starting out with reverse engineering and exploit development are side-stepped by using `pwntools`, because it was written with knowledge of those pitfalls.
 
-### Enhancements to `pwnlib.elf` module for editing ELFs
+Eventually, the goal is to integrate `pwntools` into a MOOC like those that are provided Khan Academy.  In order for this to happen, `pwntools` has to be robust, easy-to-use, and well-tested.
 
-Currently, the `pwnlib.elf` module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the `pyelftools` library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.
+### Contacting Binjitsu Developers
 
-Extending the existing functionality to provide the ability to modify, re-order, or otherwise re-write ELF files without affecting their native functionality (a la `the-backdoor-factory`) would be a great benefit to attack-defend CTFs.
 
-## Exploitation Improvements
 
-These improvements require both knowledge of Python, and a good understanding of reverse engineering and exploitation primitives.
+IRC channel:
+Mailing list(s):
+Include any special instructions/info about communicating: e.g. what time zones are your mentors in? do you prefer it if gsoc students introduce themselves first or just dive in? are there any common mistakes students make when making a first impression?
 
-### Multi-arch support for `pwnlib.rop`
+Getting Started
 
-Currently, the ROP generation in the *released* version of `pwntools` does not support any architectures for automatic ROP gadget extraction, or chain building, except for on i386.
+Links to setup instructions go here. Some suggested things to answer:
 
-Given the increasing prevalence of x86_64, ARM, and Windows binaries, the current `pwnlib.rop` module needs to be overhauled.  In  particular, it needs support for specifying which ABI is being used, in addition to which architecture.  This is important for distinguishing x86_64 Linux vs. Windows, which use different registers to pass their arguments, as well as different stack alignments and reserved per-frame stack space.
+Where is the link to a setup guide for new developers?
+Are there any unusual libraries/applications that need to be installed first?
+What type of source control do you use? (include links to help and setup guides!)
+What's the process for submitting your first bug fix?
+Where should students look to find easy bugs to try out?
+Writing your application
 
-Additionally, specification of ABIs should allow direct invokation of syscalls after properly preparing the register arguments.  While this is no different from the standard user-mode ABI on some architectures (e.g. x86_64 Linux), it differs greatly on others (i386 Linux).
+Links to advice about applications and the application template goes here.
 
-### Porting Shellcode to Pwntools
+Project Ideas
 
-Pwntools currently has a good deal of shellcode available in `pwnlib.shellcraft` for i386, amd64, and ARM.  However, there are lots of things that are missing (e.g. file-read, file-write, file descriptor proxying) which would be excellent additions to the corpus.
+1. Project name
 
-Porting shellcode to pwntools would require ingesting shellcode from Shell-Storm.org or ExploitDB.com, and re-writing them as Mako templates in pwntools.  Ideally, all shellcode will use (or be refactored to use) templates for common operations.
+Project description: Make sure you have a high-level description that any student can understand, as well as deeper details
+Skills: programming languages? specific domain knowledge?
+Difficulty level: Easy/Intermediate/Hard classification (students ask for this info frequently to help them narrow down their choices)
+Related Readings/Links: was there a mailing list discussion about this topic? standards you want the students to read first? bugs/feature requests?
+Potential mentors: A list of mentors likely to be involved with this project, so students know who to look for on IRC/mailing lists if they have questions. (If you've had trouble with students overwhelming specific mentors, feel free to re-iterate here if students should contact the mailing list to reach all mentors.)
+2. Project name
 
-### Shellcode Encoders
-
-Currently, `pwntools` does not have internal support for encoding shellcode to avoid detection by filters or functions which stop on terminators (e.g. `\0` or `\n`).  Previously, there was a port of Metasploit's `shikata-ga-nai` encoder which was available in pwntools.
-
-Porting this encoder back into the current `pwntools`, as well as adding additional encoders for alternate architectures, would be extremely useful for exploitation.  In particular, `pwntools` currently goes to great lengths to ensure that most shellcode that is generated is NULL- and newline-free.  Adding encoders would allow use of `pwntools`-generated for the remaining shellcode, and ease the constraints on existing shellcode.
-
-### SIGRET Exploitation Assitance
-
-Currently, `pwntools` is completely unaware of SIGRET-style ROP (SROP).  Helpers for generating valid register frames for use with SROP would be very useful.
-
-### Format String Payload Generation
-
-Currently, `pwntools` is unable to offer any assistance in generation of format string payloads.  The open-source project `libformatstr` would serve as an excellent starting point for adding this functionality to pwntools.
-
-Additional functionality could be added in order to enhance the robustness and automation.  For example, the `DynELF` object in `pwntools` allows automatically leaking memory to resolve symbols in remote address spaces.  A similar mechanism could be used to automate discovery of control bounds (e.g. format string input size, argument index, prefixed characters, etc.).
+As above. etc. Unless there's a compelling reason to sort in some other order, ideas should be ordered approximately from easiest to hardest.
