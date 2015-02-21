@@ -30,6 +30,12 @@ Eventually, the goal is to integrate `pwntools` into a MOOC like those that are 
 
 ## Contacting Binjitsu Developers
 
+### Who Are We?
+
+We're [these guys](mentors)!
+
+### Getting in Touch
+
 The best way to get ahold of us is on IRC!
 
 - IRC channel: `#pwning` on Freenode
