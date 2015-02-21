@@ -1,7 +1,5 @@
 ## About Binjitsu
 
-Tell the students a bit about your organization. Here's some questions you might want to answer:
-
 ### What is pwntools?
 
 `pwntools` is an open-source, MIT-licensed framework for automating and aiding in the development of exploits for Capture The Flag computer security competitions.
@@ -30,19 +28,29 @@ One of the common post-competition activities for CTF is to post a write-up of t
 
 Eventually, the goal is to integrate `pwntools` into a MOOC like those that are provided Khan Academy.  In order for this to happen, `pwntools` has to be robust, easy-to-use, and well-tested.
 
-### Contacting Binjitsu Developers
+## Contacting Binjitsu Developers
 
+IRC channel: `#pwning` on Freenode
+Nicks: `ebeip90`, `IdolfHatler`, `br0ns`
 
+## Getting Started
 
-IRC channel:
-Mailing list(s):
-Include any special instructions/info about communicating: e.g. what time zones are your mentors in? do you prefer it if gsoc students introduce themselves first or just dive in? are there any common mistakes students make when making a first impression?
+Getting started with Binjitsu is easy!  If you're using Ubuntu, only a few commands away.
 
-Getting Started
+```
+$ apt-get install python2.7 python2.7-dev python-pip
+$ git clone https://github.com/binjitsu/binjitsu
+$ cd binjitsu
+$ pip install -e .
+```
+
+### Source Control and Contributing
+
+###
 
 Links to setup instructions go here. Some suggested things to answer:
 
-Where is the link to a setup guide for new developers?
+Where is the link to a setup gcuide for new developers?
 Are there any unusual libraries/applications that need to be installed first?
 What type of source control do you use? (include links to help and setup guides!)
 What's the process for submitting your first bug fix?
