@@ -32,7 +32,7 @@ Eventually, the goal is to integrate `pwntools` into a MOOC like those that are 
 
 ### Who Are We?
 
-We're [these guys](mentors)!
+We're [these guys](mentors.md)!
 
 ### Getting in Touch
 
