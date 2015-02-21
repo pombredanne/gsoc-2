@@ -20,7 +20,7 @@ One of the common post-competition activities for CTF is to post a write-up of t
 
 ### What language is it written in?
 
-`pwntools` is written exclusively in Python.  Its dependencies are almost all written in Python, with the exception of `libcapstone` and dependencies on system binaries (e.g. `gcc`).
+`pwntools` is written exclusively in Python, and targets Python 2.7.
 
 ### How is it going to change the world?
 
