@@ -1,6 +1,10 @@
 # Binjitsu: Google Summer of Code
 
+Welcome to the Google Summer of Code landing page for the Binjitsu project!
+
+You can find more information about the project, its mentors, project ideas, and how to get started below!
+
 - [About Binjitsu](about.md)
 - [Binjitsu Mentors and Contact Information](mentors.md)
-- [Getting Started](getting-started.md)
 - [Project Ideas](ideas)
+- [Getting Started](getting-started.md)
