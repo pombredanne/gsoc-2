@@ -1,3 +1,4 @@
+![](https://avatars2.githubusercontent.com/u/6656233?v=3&s=200)
 # Binjitsu: Google Summer of Code
 
 Welcome to the Google Summer of Code landing page for the Binjitsu project!
