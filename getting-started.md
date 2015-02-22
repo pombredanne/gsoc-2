@@ -1,7 +1,7 @@
 
 ## Getting Started
 
-Pwntools is designed to get you up and running as fast as possible.  
+Pwntools is designed to get you up and running as fast as possible!
 
 ### Getting the Software
 
