@@ -1,6 +1,6 @@
-## About Binjitsu
+## About Pwntools and Binjitsu
 
-### What is binjitsu and pwntools?
+### What are binjitsu and pwntools?
 
 `pwntools` is an open-source, MIT-licensed framework for automating and aiding in the development of exploits for Capture The Flag computer security competitions.  `binjitsu` is a fork of this project that is developed more rapidly, which contributes changes back to the main `pwntools` project.
 
