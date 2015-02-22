@@ -12,7 +12,7 @@ Currently, all of the tests are run as part of a wrapper via `sphinx`.  This pla
 
 - [Testing Your Code - Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/tests/)
 - [PyTest.org](http://pytest.org/latest/)
-- [An Introduction to Travis-CI](http://www.slideshare.net/Gengo/travis-ci-26008691)
+- [Continuous Integration in Python: Travis-CI](http://ilovesymposia.com/2014/10/15/continuous-integration-in-python-4-set-up-travis-ci/)
 
 #### Difficulty Level
 
