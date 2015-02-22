@@ -101,29 +101,27 @@ This is the current list of ideas, sorted in general order of "easiest" to "hard
 
 These ideas only require knowledge of Python, and do not expect experience regarding binary exploitation or Capture the Flag.
 
-- [Unit Testing](unit)
-- [Integration Testing](integration)
-- [ELF Modification](elf)
-- [OS X Compatibility](mac)
-- [Windows PE Support](pe)
-- [Terminal Revamp](term)
+- [Unit Testing](ideas/unit)
+- [Integration Testing](ideas/integration)
+- [ELF Modification](ideas/elf)
+- [OS X Compatibility](ideas/mac)
+- [Windows PE Support](ideas/pe)
+- [Terminal Revamp](ideas/term)
 
 ### Exploitation Improvements
 
 These improvements require both knowledge of Python, and a good understanding of reverse engineering and exploitation primitives.
 
-- [Moar Exploits!](exploits)
-- [Moar Shellcode!](shellcode)
-- [SIGRET Assistance](sigret)
-- [Format Strings](format)
-- [Shellcode Encoders](encoders)
-- [Multi-Architecture ROP](ROP)
+- [Moar Exploits!](ideas/exploits)
+- [Moar Shellcode!](ideas/shellcode)
+- [SIGRET Assistance](ideas/sigret)
+- [Format Strings](ideas/format)
+- [Shellcode Encoders](ideas/encoders)
+- [Multi-Architecture ROP](ideas/ROP)
 
-### Enhancements to `pwnlib.elf` module for editing ELFs
+### Port Doctests to a Unit Testing Framework
 
-Currently, the `pwnlib.elf` module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the `pyelftools` library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.
-
-Extending the existing functionality to provide the ability to modify, re-order, or otherwise re-write ELF files without affecting their native functionality (a la `the-backdoor-factory`) would be a great benefit to attack-defend CTFs.
+Currently, all of the tests are run as part of a wrapper via `sphinx`.  This places a large number of restrictions on the tests, and requires manual addition to the corpus rather than automated test enumeration.  Ideally, test discovery would be automated, and handle both doctests and unit tests.  Both `nosetests` and `py.test` are excellent candidates for this, but there are expectations built into the current tests which preclude the use of these frameworks.
 
 #### Skills Required
 
@@ -132,103 +130,13 @@ Extending the existing functionality to provide the ability to modify, re-order,
 
 #### Resources
 
-- [Executable and Linkable Format (Wikipedia)](http://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
-- [the-backdoor-factory](https://github.com/secretsquirrel/the-backdoor-factory)
+- [Testing Your Code - Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/tests/)
+- [PyTest.org](http://pytest.org/latest/)
+- [Continuous Integration in Python: Travis-CI](http://ilovesymposia.com/2014/10/15/continuous-integration-in-python-4-set-up-travis-ci/)
 
 #### Difficulty Level
 
-Medium
-
-#### Potential Mentors
-
-- `ebeip90`
-- `Idolf`
-- `br0ns`
-
-### Shellcode Encoders
-
-Currently, `pwntools` does not have internal support for encoding shellcode to avoid detection by filters or functions which stop on terminators (e.g. `\0` or `\n`).  Previously, there was a port of Metasploit's `shikata-ga-nai` encoder which was available in pwntools.
-
-Porting this encoder back into the current `pwntools`, as well as adding additional encoders for alternate architectures, would be extremely useful for exploitation.  In particular, `pwntools` currently goes to great lengths to ensure that most shellcode that is generated is NULL- and newline-free.  Adding encoders would allow use of `pwntools`-generated for the remaining shellcode, and ease the constraints on existing shellcode.
-
-
-#### Skills Required
-
-- Python
-- Assembly
-
-#### Resources
-
-- [Shellcoder's Handbook](http://www.amazon.com/The-Shellcoders-Handbook-Discovering-Exploiting/dp/047008023X)
-- [Metasploit: Low Level](http://www.exploit-db.com/wp-content/themes/exploit/docs/18532.pdf)
-- [Cascading Polymorphic XOR Encoder in Python](http://www.iodigitalsec.com/python-cascading-xor-polymorphic-shellcode-generator/)
-- [ALPAH3 Shellcode Encoder](https://code.google.com/p/alpha3/)
-- [SLAE - Custom RBIX Shellcode Encoder](https://www.rcesecurity.com/2015/01/slae-custom-rbix-shellcode-encoder-decoder/)
-
-#### Difficulty Level
-
-Medium (port old encoder to current `pwntools`) to High (porting other encoders)
-
-#### Potential Mentors
-
-- `ebeip90`
-- `Idolf`
-- `br0ns`
-
-## More Exploit Examples!
-
-There are easily hundreds of different exploits available [just from searching Google](https://www.google.com/webhp#q=%22from+pwn+import%22).
-Unfortunately, these aren't all in one central location, and aren't being used to verify
-that we're aware of any feature-breaking changes that we make.
-
-This project would involve finding well-written exploits using `pwntools` 
-(or re-writing other exploits to use it) and collecting them into the 
-`pwntools-write-ups` repository.
-
-After a good number are gathered and in working condition, a wrapper should
-be developed to ensure that the exploits all work with a single command, so
-that this can be integrated into the Continuous Integration tests.
-
-#### Skills Required
-
-- Python
-- Linux
-- Willing to learn!
-
-#### Resources
-
-- [pwntools-write-ups](https://github.com/Gallopsled/pwntools-write-ups)
-- [Google: "from pwn import *"](https://www.google.com/webhp#q=%22from+pwn+import%22)
-
-#### Difficulty Level
-
-Varies wildly, from low to very high
-
-#### Potential Mentors
-
-- `ebeip90`
-- `Idolf`
-- `br0ns`
-
-### Format String Payload Generation
-
-Currently, `pwntools` is unable to offer any assistance in generation of format string payloads.  The open-source project `libformatstr` would serve as an excellent starting point for adding this functionality to pwntools.
-
-Additional functionality could be added in order to enhance the robustness and automation.  For example, the `DynELF` object in `pwntools` allows automatically leaking memory to resolve symbols in remote address spaces.  A similar mechanism could be used to automate discovery of control bounds (e.g. format string input size, argument index, prefixed characters, etc.).
-
-#### Skills Required
-
-- Python
-- Linux
-
-#### Resources
-
-- [libformatstr](https://github.com/hellman/libformatstr)
-- [Format String Vulnerabilities](http://jbremer.org/format-string-vulnerabilities/)
-
-#### Difficulty Level
-
-Low to medium
+Low
 
 #### Potential Mentors
 
@@ -259,6 +167,32 @@ The current [examples repository][1] is a bit outdated and doesn't work with the
 #### Difficulty Level
 
 Low to medium
+
+#### Potential Mentors
+
+- `ebeip90`
+- `Idolf`
+- `br0ns`
+
+### Enhancements to `pwnlib.elf` module for editing ELFs
+
+Currently, the `pwnlib.elf` module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the `pyelftools` library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.
+
+Extending the existing functionality to provide the ability to modify, re-order, or otherwise re-write ELF files without affecting their native functionality (a la `the-backdoor-factory`) would be a great benefit to attack-defend CTFs.
+
+#### Skills Required
+
+- Python
+- Linux
+
+#### Resources
+
+- [Executable and Linkable Format (Wikipedia)](http://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
+- [the-backdoor-factory](https://github.com/secretsquirrel/the-backdoor-factory)
+
+#### Difficulty Level
+
+Medium
 
 #### Potential Mentors
 
@@ -329,30 +263,60 @@ Medium
 - `Idolf`
 - `br0ns`
 
-### Multi-arch support for `pwnlib.rop`
+### Overhaul / re-write of the `pwnlib.term` module
 
-#### Description
+This module is currently the least-well-understood module and in its current form isn't documented or tested.
 
-Currently, the ROP generation in the *released* version of `pwntools` does not support any architectures for automatic ROP gadget extraction, or chain building, except for on i386.
-
-Given the increasing prevalence of x86_64, ARM, and Windows binaries, the current `pwnlib.rop` module needs to be overhauled.  In  particular, it needs support for specifying which ABI is being used, in addition to which architecture.  This is important for distinguishing x86_64 Linux vs. Windows, which use different registers to pass their arguments, as well as different stack alignments and reserved per-frame stack space.
-
-Additionally, specification of ABIs should allow direct invokation of syscalls after properly preparing the register arguments.  While this is no different from the standard user-mode ABI on some architectures (e.g. x86_64 Linux), it differs greatly on others (i386 Linux).
+Re-implementing, or re-factoring the current implementation, should allow this module to be tested in an automated manner.
 
 #### Skills Required
 
 - Python
 - Linux
-- Assembly
-- Familiar with buffer overflows 
 
 #### Resources
 
-- [Return Oriented Programming (PSU.edu)](http://www.cse.psu.edu/~tjaeger/cse443-s12/slides/cse443-lecture-25-rop.pdf)
+- [Terminal Emulation (Wikipedia)](http://en.wikipedia.org/wiki/Terminal_emulator)
+- [Curses (Python Library)](https://docs.python.org/2/library/curses.html)
 
 #### Difficulty Level
 
-High, but varies depending on familiarity with the underlying technique of Return
+Low to medium
+
+#### Potential Mentors
+
+- `ebeip90`
+- `Idolf`
+- `br0ns`
+
+## More Exploit Examples!
+
+There are easily hundreds of different exploits available [just from searching Google](https://www.google.com/webhp#q=%22from+pwn+import%22).
+Unfortunately, these aren't all in one central location, and aren't being used to verify
+that we're aware of any feature-breaking changes that we make.
+
+This project would involve finding well-written exploits using `pwntools` 
+(or re-writing other exploits to use it) and collecting them into the 
+`pwntools-write-ups` repository.
+
+After a good number are gathered and in working condition, a wrapper should
+be developed to ensure that the exploits all work with a single command, so
+that this can be integrated into the Continuous Integration tests.
+
+#### Skills Required
+
+- Python
+- Linux
+- Willing to learn!
+
+#### Resources
+
+- [pwntools-write-ups](https://github.com/Gallopsled/pwntools-write-ups)
+- [Google: "from pwn import *"](https://www.google.com/webhp#q=%22from+pwn+import%22)
+
+#### Difficulty Level
+
+Varies wildly, from low to very high
 
 #### Potential Mentors
 
@@ -413,11 +377,11 @@ Medium
 - `Idolf`
 - `br0ns`
 
-### Overhaul / re-write of the `pwnlib.term` module
+### Format String Payload Generation
 
-This module is currently the least-well-understood module and in its current form isn't documented or tested.
+Currently, `pwntools` is unable to offer any assistance in generation of format string payloads.  The open-source project `libformatstr` would serve as an excellent starting point for adding this functionality to pwntools.
 
-Re-implementing, or re-factoring the current implementation, should allow this module to be tested in an automated manner.
+Additional functionality could be added in order to enhance the robustness and automation.  For example, the `DynELF` object in `pwntools` allows automatically leaking memory to resolve symbols in remote address spaces.  A similar mechanism could be used to automate discovery of control bounds (e.g. format string input size, argument index, prefixed characters, etc.).
 
 #### Skills Required
 
@@ -426,8 +390,8 @@ Re-implementing, or re-factoring the current implementation, should allow this m
 
 #### Resources
 
-- [Terminal Emulation (Wikipedia)](http://en.wikipedia.org/wiki/Terminal_emulator)
-- [Curses (Python Library)](https://docs.python.org/2/library/curses.html)
+- [libformatstr](https://github.com/hellman/libformatstr)
+- [Format String Vulnerabilities](http://jbremer.org/format-string-vulnerabilities/)
 
 #### Difficulty Level
 
@@ -439,25 +403,60 @@ Low to medium
 - `Idolf`
 - `br0ns`
 
+### Shellcode Encoders
 
-### Port Doctests to a Unit Testing Framework
+Currently, `pwntools` does not have internal support for encoding shellcode to avoid detection by filters or functions which stop on terminators (e.g. `\0` or `\n`).  Previously, there was a port of Metasploit's `shikata-ga-nai` encoder which was available in pwntools.
 
-Currently, all of the tests are run as part of a wrapper via `sphinx`.  This places a large number of restrictions on the tests, and requires manual addition to the corpus rather than automated test enumeration.  Ideally, test discovery would be automated, and handle both doctests and unit tests.  Both `nosetests` and `py.test` are excellent candidates for this, but there are expectations built into the current tests which preclude the use of these frameworks.
+Porting this encoder back into the current `pwntools`, as well as adding additional encoders for alternate architectures, would be extremely useful for exploitation.  In particular, `pwntools` currently goes to great lengths to ensure that most shellcode that is generated is NULL- and newline-free.  Adding encoders would allow use of `pwntools`-generated for the remaining shellcode, and ease the constraints on existing shellcode.
+
+
+#### Skills Required
+
+- Python
+- Assembly
+
+#### Resources
+
+- [Shellcoder's Handbook](http://www.amazon.com/The-Shellcoders-Handbook-Discovering-Exploiting/dp/047008023X)
+- [Metasploit: Low Level](http://www.exploit-db.com/wp-content/themes/exploit/docs/18532.pdf)
+- [Cascading Polymorphic XOR Encoder in Python](http://www.iodigitalsec.com/python-cascading-xor-polymorphic-shellcode-generator/)
+- [ALPAH3 Shellcode Encoder](https://code.google.com/p/alpha3/)
+- [SLAE - Custom RBIX Shellcode Encoder](https://www.rcesecurity.com/2015/01/slae-custom-rbix-shellcode-encoder-decoder/)
+
+#### Difficulty Level
+
+Medium (port old encoder to current `pwntools`) to High (porting other encoders)
+
+#### Potential Mentors
+
+- `ebeip90`
+- `Idolf`
+- `br0ns`
+
+### Multi-arch support for `pwnlib.rop`
+
+#### Description
+
+Currently, the ROP generation in the *released* version of `pwntools` does not support any architectures for automatic ROP gadget extraction, or chain building, except for on i386.
+
+Given the increasing prevalence of x86_64, ARM, and Windows binaries, the current `pwnlib.rop` module needs to be overhauled.  In  particular, it needs support for specifying which ABI is being used, in addition to which architecture.  This is important for distinguishing x86_64 Linux vs. Windows, which use different registers to pass their arguments, as well as different stack alignments and reserved per-frame stack space.
+
+Additionally, specification of ABIs should allow direct invokation of syscalls after properly preparing the register arguments.  While this is no different from the standard user-mode ABI on some architectures (e.g. x86_64 Linux), it differs greatly on others (i386 Linux).
 
 #### Skills Required
 
 - Python
 - Linux
+- Assembly
+- Familiar with buffer overflows 
 
 #### Resources
 
-- [Testing Your Code - Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/tests/)
-- [PyTest.org](http://pytest.org/latest/)
-- [Continuous Integration in Python: Travis-CI](http://ilovesymposia.com/2014/10/15/continuous-integration-in-python-4-set-up-travis-ci/)
+- [Return Oriented Programming (PSU.edu)](http://www.cse.psu.edu/~tjaeger/cse443-s12/slides/cse443-lecture-25-rop.pdf)
 
 #### Difficulty Level
 
-Low
+High, but varies depending on familiarity with the underlying technique of Return
 
 #### Potential Mentors
 
