@@ -8,3 +8,21 @@ The current [examples repository][1] is a bit outdated and doesn't work with the
 [1]: https://github.com/Gallopsled/pwntools-write-ups
 [2]: https://github.com/Gallopsled/pwntools-regression
 
+#### Skills Required
+
+- C
+- Python
+
+#### Resources
+
+- [Integration Testing (Wikipedia)](http://en.wikipedia.org/wiki/Integration_testing)
+
+#### Difficulty Level
+
+Low to medium
+
+#### Potential Mentors
+
+- `ebeip90`
+- `Idolf`
+- `br0ns`
