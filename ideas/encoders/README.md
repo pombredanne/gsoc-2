@@ -14,6 +14,9 @@ Porting this encoder back into the current `pwntools`, as well as adding additio
 
 - [Shellcoder's Handbook](http://www.amazon.com/The-Shellcoders-Handbook-Discovering-Exploiting/dp/047008023X)
 - [Metasploit: Low Level](http://www.exploit-db.com/wp-content/themes/exploit/docs/18532.pdf)
+- [Cascading Polymorphic XOR Encoder in Python](http://www.iodigitalsec.com/python-cascading-xor-polymorphic-shellcode-generator/)
+- [ALPAH3 Shellcode Encoder](https://code.google.com/p/alpha3/)
+- [SLAE - Custom RBIX Shellcode Encoder](https://www.rcesecurity.com/2015/01/slae-custom-rbix-shellcode-encoder-decoder/)
 
 #### Difficulty Level
 
