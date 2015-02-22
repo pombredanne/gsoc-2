@@ -101,25 +101,25 @@ This is the current list of ideas, sorted in general order of "easiest" to "hard
 
 These ideas only require knowledge of Python, and do not expect experience regarding binary exploitation or Capture the Flag.
 
-- [Unit Testing](ideas/unit)
-- [Integration Testing](ideas/integration)
-- [ELF Modification](ideas/elf)
-- [OS X Compatibility](ideas/mac)
-- [Windows PE Support](ideas/pe)
-- [Terminal Revamp](ideas/term)
+- [Unit Testing](#unit)
+- [Integration Testing](#integration)
+- [ELF Modification](#elf)
+- [OS X Compatibility](#mac)
+- [Windows PE Support](#pe)
+- [Terminal Revamp](#term)
 
 ##### Exploitation Improvements
 
 These improvements require both knowledge of Python, and a good understanding of reverse engineering and exploitation primitives.
 
-- [Moar Exploits!](ideas/exploits)
-- [Moar Shellcode!](ideas/shellcode)
-- [SIGRET Assistance](ideas/sigret)
-- [Format Strings](ideas/format)
-- [Shellcode Encoders](ideas/encoders)
-- [Multi-Architecture ROP](ideas/ROP)
+- [Moar Exploits!](#exploits)
+- [Moar Shellcode!](#shellcode)
+- [SIGRET Assistance](#sigret)
+- [Format Strings](#format)
+- [Shellcode Encoders](#encoders)
+- [Multi-Architecture ROP](#ROP)
 
-### Port Doctests to a Unit Testing Framework
+### <a name="unit"></a>Port Doctests to a Unit Testing Framework
 
 Currently, all of the tests are run as part of a wrapper via `sphinx`.  This places a large number of restrictions on the tests, and requires manual addition to the corpus rather than automated test enumeration.  Ideally, test discovery would be automated, and handle both doctests and unit tests.  Both `nosetests` and `py.test` are excellent candidates for this, but there are expectations built into the current tests which preclude the use of these frameworks.
 
