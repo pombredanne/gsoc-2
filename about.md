@@ -28,31 +28,6 @@ One of the common post-competition activities for CTF is to post a write-up of t
 
 Eventually, the goal is to integrate `pwntools` into a MOOC like those that are provided Khan Academy.  In order for this to happen, `pwntools` has to be robust, easy-to-use, and well-tested.
 
-## Contacting Binjitsu Developers
-
-### Who Are We?
-
-We're [these guys](mentors.md)!
-
-### Getting in Touch
-
-The best way to get ahold of us is on IRC!
-
-- IRC channel: `#pwning` on Freenode
-- Nicks: `ebeip90`, `IdolfHatler`, `br0ns`
-
-## Getting Started
-
-Getting started with Binjitsu is easy!  If you're using Ubuntu, only a few commands away.
-
-```
-$ apt-get install python2.7 python2.7-dev python-pip
-$ git clone https://github.com/binjitsu/binjitsu
-$ cd binjitsu
-$ pip install -e .
-```
-
-### Source Control and Contributing
 
 ###
 
