@@ -9,6 +9,8 @@ These ideas only require knowledge of Python, and do not expect experience regar
 - [Unit Testing](unit)
 - [Integration Testing](integration)
 - [ELF Modification](elf)
+- [OS X Compatibility](mac)
+- [Windows PE Support](pe)
 - [Terminal Revamp](term)
 
 ### Exploitation Improvements
