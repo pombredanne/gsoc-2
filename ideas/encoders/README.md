@@ -17,7 +17,7 @@ Porting this encoder back into the current `pwntools`, as well as adding additio
 
 #### Difficulty Level
 
-High
+Medium (port old encoder to current `pwntools`) to High (porting other encoders)
 
 #### Potential Mentors
 
