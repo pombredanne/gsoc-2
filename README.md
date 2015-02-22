@@ -9,7 +9,7 @@ You can find more information about the project, its mentors, project ideas, and
 - [About Pwntools](#about-pwntools-and-binjitsu)
 - [Mentors and Contact Information](#mentors)
 - [Project Ideas](#project-ideas)
-- [Getting Started](getting-started.md)
+- [Getting Started](#getting-started)
 
 ## About Pwntools and Binjitsu
 
@@ -118,6 +118,7 @@ These improvements require both knowledge of Python, and a good understanding of
 - [Format Strings](format)
 - [Shellcode Encoders](encoders)
 - [Multi-Architecture ROP](ROP)
+
 ### Enhancements to `pwnlib.elf` module for editing ELFs
 
 Currently, the `pwnlib.elf` module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the `pyelftools` library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.
