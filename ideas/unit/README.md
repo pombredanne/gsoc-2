@@ -6,11 +6,13 @@ Currently, all of the tests are run as part of a wrapper via `sphinx`.  This pla
 #### Skills Required
 
 - Python
+- Linux
 
 #### Resources
 
 - [Testing Your Code - Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/tests/)
 - [PyTest.org](http://pytest.org/latest/)
+- [An Introduction to Travis-CI](http://www.slideshare.net/Gengo/travis-ci-26008691)
 
 #### Difficulty Level
 
