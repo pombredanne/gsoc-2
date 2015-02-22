@@ -5,6 +5,7 @@ Currently, `pwntools` is completely unaware of SIGRET-style ROP (SROP).  Helpers
 #### Skills Required
 
 - Python
+- Linux
 - Familiar with ROP
 
 #### Resources
