@@ -18,3 +18,4 @@ These improvements require both knowledge of Python, and a good understanding of
 - [Multi-Architecture ROP](ROP)
 - [Moar Shellcode!](shellcode)
 - [SIGRET Assistance](sigret)
+- [Moar Exploits!](exploits)
