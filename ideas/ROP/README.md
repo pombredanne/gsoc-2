@@ -11,6 +11,7 @@ Additionally, specification of ABIs should allow direct invokation of syscalls a
 #### Skills Required
 
 - Python
+- Linux
 - Assembly
 - Familiar with buffer overflows 
 
