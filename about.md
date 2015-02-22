@@ -6,7 +6,7 @@
 
 In particular, `pwntools` provides commonly-used functionality which are frequently re-implemented by exploit authors for each exploit, or copy-pasted around.  Additionally, it provides assistance in the exploit development process by automating some operations, or providing automated analysis and discovery about a program.
 
-**If you're unfamiliar with Capture the Flag, Trail of Bits has an excellent introduction [here](https://trailofbits.github.io/ctf/intro/README.html).**
+**If you're unfamiliar with Capture the Flag and Competitive Hacking, you should watch [this video!](https://www.youtube.com/watch?v=ECMExVt1lbI).**
 
 ### Why is it interesting?
 
