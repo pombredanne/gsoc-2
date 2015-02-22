@@ -145,7 +145,7 @@ Low
 - `br0ns`
 
 
-### Extend Integration Testing Framework and Examples
+### <a name="integration"></a>Extend Integration Testing Framework and Examples
 
 There is also a [regression testing][2] framework that's designed to permit automatic testing of various parts of pwntools as a whole, rather than in bite-sized prepared chunks.  This regression testing code works, but it is not complete and does not give good coverage for all of the code.
 
@@ -174,7 +174,7 @@ Low to medium
 - `Idolf`
 - `br0ns`
 
-### Enhancements to `pwnlib.elf` module for editing ELFs
+### <a name="elf"></a>Enhancements to `pwnlib.elf` module for editing ELFs
 
 Currently, the `pwnlib.elf` module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the `pyelftools` library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.
 
@@ -200,7 +200,7 @@ Medium
 - `Idolf`
 - `br0ns`
 
-### Mac OS X Support
+### <a name="mac"></a>Mac OS X Support
 
 Currently, `pwntools` and `binjitsu` work best on Linux distributions like Ubuntu.  
 However, lots of developers prefer to use alternate operating systems like Mac OS X,
@@ -231,7 +231,8 @@ Medium
 #### Potential Mentors
 
 - `ebeip90`
-### Windows PE File Support
+
+### <a name="pe"></a>Windows PE File Support
 
 Currently, `pwntools` and `binjitsu` have a lot of helper utilities for loading,
 parsing, and extracting information from Linux ELF files.  However, the same 
@@ -263,7 +264,7 @@ Medium
 - `Idolf`
 - `br0ns`
 
-### Overhaul / re-write of the `pwnlib.term` module
+### <a name="term"></a>Overhaul / re-write of the `pwnlib.term` module
 
 This module is currently the least-well-understood module and in its current form isn't documented or tested.
 
@@ -324,7 +325,7 @@ Varies wildly, from low to very high
 - `Idolf`
 - `br0ns`
 
-### Porting Shellcode to Pwntools
+### <a name="shellcode"></a>Porting Shellcode to Pwntools
 
 Pwntools currently has a good deal of shellcode available in `pwnlib.shellcraft` for i386, amd64, and ARM.  However, there are lots of things that are missing (e.g. file-read, file-write, file descriptor proxying) which would be excellent additions to the corpus.
 
@@ -351,7 +352,7 @@ Low to Moderate
 - `Idolf`
 - `br0ns`
 
-### SIGRET Exploitation Assitance
+### <a name="sigret"></a>SIGRET Exploitation Assitance
 
 Currently, `pwntools` is completely unaware of SIGRET-style ROP (SROP).  Helpers for generating valid register frames for use with SROP would be very useful.
 
@@ -377,7 +378,7 @@ Medium
 - `Idolf`
 - `br0ns`
 
-### Format String Payload Generation
+### <a name="format"></a>Format String Payload Generation
 
 Currently, `pwntools` is unable to offer any assistance in generation of format string payloads.  The open-source project `libformatstr` would serve as an excellent starting point for adding this functionality to pwntools.
 
@@ -403,7 +404,7 @@ Low to medium
 - `Idolf`
 - `br0ns`
 
-### Shellcode Encoders
+### <a name="encoders"></a>Shellcode Encoders
 
 Currently, `pwntools` does not have internal support for encoding shellcode to avoid detection by filters or functions which stop on terminators (e.g. `\0` or `\n`).  Previously, there was a port of Metasploit's `shikata-ga-nai` encoder which was available in pwntools.
 
@@ -433,7 +434,7 @@ Medium (port old encoder to current `pwntools`) to High (porting other encoders)
 - `Idolf`
 - `br0ns`
 
-### Multi-arch support for `pwnlib.rop`
+### <a name="ROP"></a>Multi-arch support for `pwnlib.rop`
 
 #### Description
 
