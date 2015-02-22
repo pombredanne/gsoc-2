@@ -16,7 +16,7 @@ Re-implementing, or re-factoring the current implementation, should allow this m
 
 #### Difficulty Level
 
-Medium
+Low to medium
 
 #### Potential Mentors
 
