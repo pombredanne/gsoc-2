@@ -12,6 +12,7 @@ The current [examples repository][1] is a bit outdated and doesn't work with the
 
 - C
 - Python
+- Linux
 
 #### Resources
 
