@@ -7,7 +7,8 @@ Porting shellcode to pwntools would require ingesting shellcode from Shell-Storm
 #### Skills Required
 
 - Python
-- Shellcode
+- Assembly
+- Linux
 
 #### Resources
 
