@@ -24,5 +24,3 @@ Both `pwntools` and `binjitsu` use [Github](https://github.com) for source contr
 
 Instructions on getting up and running with a local copy for development are available in [CONTRIBUTING.md](https://github.com/binjitsu/binjitsu/blob/master/CONTRIBUTING.md) for each project.
 
-### Running Examples
-
