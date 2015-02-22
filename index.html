@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Binjitsu: Google Summer Of Code by binjitsu</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Binjitsu: Google Summer Of Code</h1>
+        <h2>CTF framework and exploit development library</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/binjitsu/gsoc/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/binjitsu/gsoc/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/binjitsu/gsoc" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p><img src="gsoc.png" alt=""></p>
+
+<h1>
+<a id="pwntools--binjitsu-google-summer-of-code" class="anchor" href="#pwntools--binjitsu-google-summer-of-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pwntools &amp; Binjitsu: Google Summer of Code</h1>
+
+<p>Welcome to the Google Summer of Code landing page for the Pwntools and Binjitsu projects!</p>
+
+<p>You can find more information about the project, its mentors, project ideas, and how to get started below!</p>
+
+<ul>
+<li><a href="#about-pwntools-and-binjitsu">About Pwntools</a></li>
+<li><a href="#mentors">Mentors and Contact Information</a></li>
+<li><a href="#project-ideas">Project Ideas</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+</ul>
+
+<h2>
+<a id="about-pwntools-and-binjitsu" class="anchor" href="#about-pwntools-and-binjitsu" aria-hidden="true"><span class="octicon octicon-link"></span></a>About Pwntools and Binjitsu</h2>
+
+<h3>
+<a id="what-are-binjitsu-and-pwntools" class="anchor" href="#what-are-binjitsu-and-pwntools" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are binjitsu and pwntools?</h3>
+
+<p><code>pwntools</code> is an open-source, MIT-licensed framework for automating and aiding in the development of exploits for Capture The Flag computer security competitions.  <code>binjitsu</code> is a fork of this project that is developed more rapidly, which contributes changes back to the main <code>pwntools</code> project.</p>
+
+<p>In particular, <code>pwntools</code> provides commonly-used functionality which are frequently re-implemented by exploit authors for each exploit, or copy-pasted around.  Additionally, it provides assistance in the exploit development process by automating some operations, or providing automated analysis and discovery about a program.</p>
+
+<p><strong>If you're unfamiliar with Capture the Flag and Competitive Hacking, you should watch <a href="https://www.youtube.com/watch?v=ECMExVt1lbI">this video!</a>.</strong></p>
+
+<h3>
+<a id="why-is-it-interesting" class="anchor" href="#why-is-it-interesting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why is it interesting?</h3>
+
+<p>Hollywood glamorizes hacking and hackers, but the truth is that computer security, vulnerability research, and exploit development are much more tedious than what's shown on the silver screen.  While we'll never reach a place where we have <a href="https://www.youtube.com/watch?v=cmR3wIBJZbk">crazy 3D cube exploit auto-generators</a>, we can certainly strive to make each part easier, faster, and more enjoyable.</p>
+
+<h3>
+<a id="who-uses-it" class="anchor" href="#who-uses-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who uses it?</h3>
+
+<p><code>pwntools</code> is widely used throughout the Capture the Flag and Wargames community.  It's primarily developed by the Gallopsled CTF team, which use it exclusively.  Its has spread among the community because of its ease of use and utility.</p>
+
+<p>One of the common post-competition activities for CTF is to post a write-up of the challenge binary.  Generally, this includes an analysis of the binary, its vulnerabilities, and details on the exploitation process.  Searching Google for <code>"from pwn import"</code> yields about 1300 hits, almost all of which are unique write-ups from different authors.</p>
+
+<h3>
+<a id="what-language-is-it-written-in" class="anchor" href="#what-language-is-it-written-in" aria-hidden="true"><span class="octicon octicon-link"></span></a>What language is it written in?</h3>
+
+<p><code>pwntools</code> is written exclusively in Python, and targets Python 2.7.</p>
+
+<h3>
+<a id="how-is-it-going-to-change-the-world" class="anchor" href="#how-is-it-going-to-change-the-world" aria-hidden="true"><span class="octicon octicon-link"></span></a>How is it going to change the world?</h3>
+
+<p><code>pwntools</code> is already an excellent resource for experienced competitors, but ideally would also be a teaching resource.  Many of the pitfalls that are encountered when starting out with reverse engineering and exploit development are side-stepped by using <code>pwntools</code>, because it was written with knowledge of those pitfalls.</p>
+
+<p>By making computer security and exploitation more approachable, we can enhance general awareness about common security-related mistakes which lead to memory corruption and eventually code execution.</p>
+
+<h2>
+<a id="mentors" class="anchor" href="#mentors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mentors</h2>
+
+<p>This is the current list of mentors for any Google Summer of Code projects.</p>
+
+<h3>
+<a id="zach-riggle-ebeip90" class="anchor" href="#zach-riggle-ebeip90" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/ZachRiggle">Zach Riggle (ebeip90)</a>
+</h3>
+
+<p>Maintainer and developer of the <code>binjitsu</code> fork, contributor to <code>pwntools</code>.</p>
+
+<h3>
+<a id="mathias-svensson-idolf" class="anchor" href="#mathias-svensson-idolf" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/Idolf">Mathias Svensson (Idolf)</a>
+</h3>
+
+<p>Maintainer and developer of <code>pwntools</code>.</p>
+
+<h3>
+<a id="morten-brøns-pedersen-br0ns" class="anchor" href="#morten-br%C3%B8ns-pedersen-br0ns" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/br0ns">Morten Brøns-Pedersen (br0ns)</a>
+</h3>
+
+<p>Maintainer and developer of <code>pwntools</code>.</p>
+
+<h2>
+<a id="getting-in-touch" class="anchor" href="#getting-in-touch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting in Touch</h2>
+
+<p>The best way to get ahold of us is on IRC! Feel free to join and introduce yourself, or ask any questions you may have!</p>
+
+<ul>
+<li>IRC channel: <code>#pwning</code> on Freenode</li>
+<li>Nicks: <code>ebeip90</code>, <code>IdolfHatler</code>, <code>br0ns</code>
+</li>
+</ul>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Pwntools is designed to get you up and running as fast as possible!</p>
+
+<h3>
+<a id="getting-the-software" class="anchor" href="#getting-the-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting the Software</h3>
+
+<p>Getting started with Binjitsu is easy!  If you're using Ubuntu, only a few commands away.</p>
+
+<pre><code>$ apt-get install python2.7 python2.7-dev python-pip
+$ git clone https://github.com/binjitsu/binjitsu
+$ cd binjitsu
+$ pip install -e .
+</code></pre>
+
+<h3>
+<a id="first-steps-and-examples" class="anchor" href="#first-steps-and-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Steps and Examples</h3>
+
+<p>The online documentation has a <a href="http://binjitsu.readthedocs.org/en/latest/intro.html">Getting Started</a> section for demonstrating some of the basic features.  More advanced use cases be found in the <a href="https://github.com/Gallopsled/pwntools-write-ups">write-ups</a> repository, or <a href="https://www.google.com/webhp#q=%22from+pwn+import%22">just by searching Google for <code>from pwn import *</code></a>!</p>
+
+<h3>
+<a id="contributing-and-source-control" class="anchor" href="#contributing-and-source-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing and Source Control</h3>
+
+<p>Both <code>pwntools</code> and <code>binjitsu</code> use <a href="https://github.com">Github</a> for source control and <a href="https://travis-ci.com">Travis CI</a> for automatic testing.</p>
+
+<p>Instructions on getting up and running with a local copy for development are available in <a href="https://github.com/binjitsu/binjitsu/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for each project.</p>
+
+<h2>
+<a id="project-ideas" class="anchor" href="#project-ideas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Ideas</h2>
+
+<p>This is the current list of ideas, sorted in general order of "easiest" to "hardest".</p>
+
+<h5>
+<a id="python-only-enhancements" class="anchor" href="#python-only-enhancements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python-Only Enhancements</h5>
+
+<p>These ideas only require knowledge of Python, and do not expect experience regarding binary exploitation or Capture the Flag.</p>
+
+<ul>
+<li><a href="#unit">Unit Testing</a></li>
+<li><a href="#integration">Integration Testing</a></li>
+<li><a href="#elf">ELF Modification</a></li>
+<li><a href="#mac">OS X Compatibility</a></li>
+<li><a href="#pe">Windows PE Support</a></li>
+<li><a href="#term">Terminal Revamp</a></li>
+</ul>
+
+<h5>
+<a id="exploitation-improvements" class="anchor" href="#exploitation-improvements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploitation Improvements</h5>
+
+<p>These improvements require both knowledge of Python, and a good understanding of reverse engineering and exploitation primitives.</p>
+
+<ul>
+<li><a href="#exploits">Moar Exploits!</a></li>
+<li><a href="#shellcode">Moar Shellcode!</a></li>
+<li><a href="#sigret">SIGRET Assistance</a></li>
+<li><a href="#format">Format Strings</a></li>
+<li><a href="#encoders">Shellcode Encoders</a></li>
+<li><a href="#ROP">Multi-Architecture ROP</a></li>
+</ul>
+
+<h3>
+<a id="port-doctests-to-a-unit-testing-framework" class="anchor" href="#port-doctests-to-a-unit-testing-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="unit"></a>Port Doctests to a Unit Testing Framework</h3>
+
+<p>Currently, all of the tests are run as part of a wrapper via <code>sphinx</code>.  This places a large number of restrictions on the tests, and requires manual addition to the corpus rather than automated test enumeration.  Ideally, test discovery would be automated, and handle both doctests and unit tests.  Both <code>nosetests</code> and <code>py.test</code> are excellent candidates for this, but there are expectations built into the current tests which preclude the use of these frameworks.</p>
+
+<h4>
+<a id="skills-required" class="anchor" href="#skills-required" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+</ul>
+
+<h4>
+<a id="resources" class="anchor" href="#resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://docs.python-guide.org/en/latest/writing/tests/">Testing Your Code - Hitchhiker's Guide to Python</a></li>
+<li><a href="http://pytest.org/latest/">PyTest.org</a></li>
+<li><a href="http://ilovesymposia.com/2014/10/15/continuous-integration-in-python-4-set-up-travis-ci/">Continuous Integration in Python: Travis-CI</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level" class="anchor" href="#difficulty-level" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Low</p>
+
+<h4>
+<a id="potential-mentors" class="anchor" href="#potential-mentors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="extend-integration-testing-framework-and-examples" class="anchor" href="#extend-integration-testing-framework-and-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="integration"></a>Extend Integration Testing Framework and Examples</h3>
+
+<p>There is also a <a href="https://github.com/Gallopsled/pwntools-regression">regression testing</a> framework that's designed to permit automatic testing of various parts of pwntools as a whole, rather than in bite-sized prepared chunks.  This regression testing code works, but it is not complete and does not give good coverage for all of the code.</p>
+
+<p>The current <a href="https://github.com/Gallopsled/pwntools-write-ups">examples repository</a> is a bit outdated and doesn't work with the current incarnation of pwntools or binjitsu.  Unfortunately, new users have very little options to turn to when looking for a good starting point for "How do I pwntools".</p>
+
+<h4>
+<a id="skills-required-1" class="anchor" href="#skills-required-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>C</li>
+<li>Python</li>
+<li>Linux</li>
+</ul>
+
+<h4>
+<a id="resources-1" class="anchor" href="#resources-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Integration_testing">Integration Testing (Wikipedia)</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-1" class="anchor" href="#difficulty-level-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Low to medium</p>
+
+<h4>
+<a id="potential-mentors-1" class="anchor" href="#potential-mentors-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="enhancements-to-pwnlibelf-module-for-editing-elfs" class="anchor" href="#enhancements-to-pwnlibelf-module-for-editing-elfs" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="elf"></a>Enhancements to <code>pwnlib.elf</code> module for editing ELFs</h3>
+
+<p>Currently, the <code>pwnlib.elf</code> module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the <code>pyelftools</code> library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.</p>
+
+<p>Extending the existing functionality to provide the ability to modify, re-order, or otherwise re-write ELF files without affecting their native functionality (a la <code>the-backdoor-factory</code>) would be a great benefit to attack-defend CTFs.</p>
+
+<h4>
+<a id="skills-required-2" class="anchor" href="#skills-required-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+</ul>
+
+<h4>
+<a id="resources-2" class="anchor" href="#resources-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format (Wikipedia)</a></li>
+<li><a href="https://github.com/secretsquirrel/the-backdoor-factory">the-backdoor-factory</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-2" class="anchor" href="#difficulty-level-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Medium</p>
+
+<h4>
+<a id="potential-mentors-2" class="anchor" href="#potential-mentors-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="mac-os-x-support" class="anchor" href="#mac-os-x-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="mac"></a>Mac OS X Support</h3>
+
+<p>Currently, <code>pwntools</code> and <code>binjitsu</code> work best on Linux distributions like Ubuntu.<br>
+However, lots of developers prefer to use alternate operating systems like Mac OS X,
+and some future challenges may even be written for it.</p>
+
+<p>This project would require making changes to <code>binjitsu</code> to make as many unit tests
+as possible pass on Mac OS X, integrating these with Travis CI, and perhaps even
+writing some integration tests to ensure end-to-end functionality.</p>
+
+<p>A stretch goal would be to extend the current generation and parsing of ELF files
+to include the Mach-O format used by OS X.</p>
+
+<h4>
+<a id="skills-required-3" class="anchor" href="#skills-required-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+<li>OS X</li>
+</ul>
+
+<h4>
+<a id="resources-3" class="anchor" href="#resources-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="https://developer.apple.com/library/mac/documentation/Porting/Conceptual/PortingUnix/intro/intro.htm">Porting UNIX/Linux Applications to OS X</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mach-O">Mach-O (Wikipedia)</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-3" class="anchor" href="#difficulty-level-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Medium</p>
+
+<h4>
+<a id="potential-mentors-3" class="anchor" href="#potential-mentors-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+</ul>
+
+<h3>
+<a id="windows-pe-file-support" class="anchor" href="#windows-pe-file-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="pe"></a>Windows PE File Support</h3>
+
+<p>Currently, <code>pwntools</code> and <code>binjitsu</code> have a lot of helper utilities for loading,
+parsing, and extracting information from Linux ELF files.  However, the same 
+level of support is not present for Windows PE files.</p>
+
+<p>The goal of this project would be to create a compatibility layer between the
+current ELF functionality based on <code>pyelftools</code>, and the Python PE library, <code>pefile</code>.</p>
+
+<h4>
+<a id="skills-required-4" class="anchor" href="#skills-required-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+<li>Windows</li>
+</ul>
+
+<h4>
+<a id="resources-4" class="anchor" href="#resources-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="https://code.google.com/p/pefile/">PEFile</a></li>
+<li><a href="https://github.com/eliben/pyelftools">PyElfTools</a></li>
+<li><a href="http://corkami.googlecode.com/files/PE101-v1.pdf">PE 101</a></li>
+<li><a href="https://corkami.googlecode.com/files/elf101.pdf">ELF 101</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-4" class="anchor" href="#difficulty-level-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Medium</p>
+
+<h4>
+<a id="potential-mentors-4" class="anchor" href="#potential-mentors-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="overhaul--re-write-of-the-pwnlibterm-module" class="anchor" href="#overhaul--re-write-of-the-pwnlibterm-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="term"></a>Overhaul / re-write of the <code>pwnlib.term</code> module</h3>
+
+<p>This module is currently the least-well-understood module and in its current form isn't documented or tested.</p>
+
+<p>Re-implementing, or re-factoring the current implementation, should allow this module to be tested in an automated manner.</p>
+
+<h4>
+<a id="skills-required-5" class="anchor" href="#skills-required-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+</ul>
+
+<h4>
+<a id="resources-5" class="anchor" href="#resources-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Terminal_emulator">Terminal Emulation (Wikipedia)</a></li>
+<li><a href="https://docs.python.org/2/library/curses.html">Curses (Python Library)</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-5" class="anchor" href="#difficulty-level-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Low to medium</p>
+
+<h4>
+<a id="potential-mentors-5" class="anchor" href="#potential-mentors-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h2>
+<a id="more-exploit-examples" class="anchor" href="#more-exploit-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="exploits"></a>More Exploit Examples!</h2>
+
+<p>There are easily hundreds of different exploits available <a href="https://www.google.com/webhp#q=%22from+pwn+import%22">just from searching Google</a>.
+Unfortunately, these aren't all in one central location, and aren't being used to verify
+that we're aware of any feature-breaking changes that we make.</p>
+
+<p>This project would involve finding well-written exploits using <code>pwntools</code> 
+(or re-writing other exploits to use it) and collecting them into the 
+<code>pwntools-write-ups</code> repository.</p>
+
+<p>After a good number are gathered and in working condition, a wrapper should
+be developed to ensure that the exploits all work with a single command, so
+that this can be integrated into the Continuous Integration tests.</p>
+
+<h4>
+<a id="skills-required-6" class="anchor" href="#skills-required-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+<li>Willing to learn!</li>
+</ul>
+
+<h4>
+<a id="resources-6" class="anchor" href="#resources-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="https://github.com/Gallopsled/pwntools-write-ups">pwntools-write-ups</a></li>
+<li><a href="https://www.google.com/webhp#q=%22from+pwn+import%22">Google: "from pwn import *"</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-6" class="anchor" href="#difficulty-level-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Varies wildly, from low to very high</p>
+
+<h4>
+<a id="potential-mentors-6" class="anchor" href="#potential-mentors-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="porting-shellcode-to-pwntools" class="anchor" href="#porting-shellcode-to-pwntools" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="shellcode"></a>Porting Shellcode to Pwntools</h3>
+
+<p>Pwntools currently has a good deal of shellcode available in <code>pwnlib.shellcraft</code> for i386, amd64, and ARM.  However, there are lots of things that are missing (e.g. file-read, file-write, file descriptor proxying) which would be excellent additions to the corpus.</p>
+
+<p>Porting shellcode to pwntools would require ingesting shellcode from Shell-Storm.org or ExploitDB.com, and re-writing them as Mako templates in pwntools.  Ideally, all shellcode will use (or be refactored to use) templates for common operations.</p>
+
+<h4>
+<a id="skills-required-7" class="anchor" href="#skills-required-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Assembly</li>
+<li>Linux</li>
+</ul>
+
+<h4>
+<a id="resources-7" class="anchor" href="#resources-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://shell-storm.org/shellcode/">Shell-Storm Shellcode Database</a></li>
+<li><a href="http://www.exploit-db.com/shellcode/">ExploitDB Shellcode Database</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-7" class="anchor" href="#difficulty-level-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Low to Moderate</p>
+
+<h4>
+<a id="potential-mentors-7" class="anchor" href="#potential-mentors-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="sigret-exploitation-assitance" class="anchor" href="#sigret-exploitation-assitance" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="sigret"></a>SIGRET Exploitation Assitance</h3>
+
+<p>Currently, <code>pwntools</code> is completely unaware of SIGRET-style ROP (SROP).  Helpers for generating valid register frames for use with SROP would be very useful.</p>
+
+<h4>
+<a id="skills-required-8" class="anchor" href="#skills-required-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+<li>Familiar with ROP</li>
+</ul>
+
+<h4>
+<a id="resources-8" class="anchor" href="#resources-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="https://www.cs.vu.nl/%7Eherbertb/papers/srop_sp14.pdf">Framing Signals - A Return to Portable Shellcode</a></li>
+<li><a href="http://x86overflow.blogspot.com/2014/04/playing-around-with-srop.html">Playing around with SROP</a></li>
+<li><a href="http://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/">An overview on Sigreturn Oriented Programming</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-8" class="anchor" href="#difficulty-level-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Medium</p>
+
+<h4>
+<a id="potential-mentors-8" class="anchor" href="#potential-mentors-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="format-string-payload-generation" class="anchor" href="#format-string-payload-generation" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="format"></a>Format String Payload Generation</h3>
+
+<p>Currently, <code>pwntools</code> is unable to offer any assistance in generation of format string payloads.  The open-source project <code>libformatstr</code> would serve as an excellent starting point for adding this functionality to pwntools.</p>
+
+<p>Additional functionality could be added in order to enhance the robustness and automation.  For example, the <code>DynELF</code> object in <code>pwntools</code> allows automatically leaking memory to resolve symbols in remote address spaces.  A similar mechanism could be used to automate discovery of control bounds (e.g. format string input size, argument index, prefixed characters, etc.).</p>
+
+<h4>
+<a id="skills-required-9" class="anchor" href="#skills-required-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+</ul>
+
+<h4>
+<a id="resources-9" class="anchor" href="#resources-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="https://github.com/hellman/libformatstr">libformatstr</a></li>
+<li><a href="http://jbremer.org/format-string-vulnerabilities/">Format String Vulnerabilities</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-9" class="anchor" href="#difficulty-level-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Low to medium</p>
+
+<h4>
+<a id="potential-mentors-9" class="anchor" href="#potential-mentors-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="shellcode-encoders" class="anchor" href="#shellcode-encoders" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="encoders"></a>Shellcode Encoders</h3>
+
+<p>Currently, <code>pwntools</code> does not have internal support for encoding shellcode to avoid detection by filters or functions which stop on terminators (e.g. <code>\0</code> or <code>\n</code>).  Previously, there was a port of Metasploit's <code>shikata-ga-nai</code> encoder which was available in pwntools.</p>
+
+<p>Porting this encoder back into the current <code>pwntools</code>, as well as adding additional encoders for alternate architectures, would be extremely useful for exploitation.  In particular, <code>pwntools</code> currently goes to great lengths to ensure that most shellcode that is generated is NULL- and newline-free.  Adding encoders would allow use of <code>pwntools</code>-generated for the remaining shellcode, and ease the constraints on existing shellcode.</p>
+
+<h4>
+<a id="skills-required-10" class="anchor" href="#skills-required-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Assembly</li>
+</ul>
+
+<h4>
+<a id="resources-10" class="anchor" href="#resources-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://www.amazon.com/The-Shellcoders-Handbook-Discovering-Exploiting/dp/047008023X">Shellcoder's Handbook</a></li>
+<li><a href="http://www.exploit-db.com/wp-content/themes/exploit/docs/18532.pdf">Metasploit: Low Level</a></li>
+<li><a href="http://www.iodigitalsec.com/python-cascading-xor-polymorphic-shellcode-generator/">Cascading Polymorphic XOR Encoder in Python</a></li>
+<li><a href="https://code.google.com/p/alpha3/">ALPAH3 Shellcode Encoder</a></li>
+<li><a href="https://www.rcesecurity.com/2015/01/slae-custom-rbix-shellcode-encoder-decoder/">SLAE - Custom RBIX Shellcode Encoder</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-10" class="anchor" href="#difficulty-level-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>Medium (port old encoder to current <code>pwntools</code>) to High (porting other encoders)</p>
+
+<h4>
+<a id="potential-mentors-10" class="anchor" href="#potential-mentors-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+
+<h3>
+<a id="multi-arch-support-for-pwnlibrop" class="anchor" href="#multi-arch-support-for-pwnlibrop" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="ROP"></a>Multi-arch support for <code>pwnlib.rop</code>
+</h3>
+
+<h4>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h4>
+
+<p>Currently, the ROP generation in the <em>released</em> version of <code>pwntools</code> does not support any architectures for automatic ROP gadget extraction, or chain building, except for on i386.</p>
+
+<p>Given the increasing prevalence of x86_64, ARM, and Windows binaries, the current <code>pwnlib.rop</code> module needs to be overhauled.  In  particular, it needs support for specifying which ABI is being used, in addition to which architecture.  This is important for distinguishing x86_64 Linux vs. Windows, which use different registers to pass their arguments, as well as different stack alignments and reserved per-frame stack space.</p>
+
+<p>Additionally, specification of ABIs should allow direct invokation of syscalls after properly preparing the register arguments.  While this is no different from the standard user-mode ABI on some architectures (e.g. x86_64 Linux), it differs greatly on others (i386 Linux).</p>
+
+<h4>
+<a id="skills-required-11" class="anchor" href="#skills-required-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills Required</h4>
+
+<ul>
+<li>Python</li>
+<li>Linux</li>
+<li>Assembly</li>
+<li>Familiar with buffer overflows </li>
+</ul>
+
+<h4>
+<a id="resources-11" class="anchor" href="#resources-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
+
+<ul>
+<li><a href="http://www.cse.psu.edu/%7Etjaeger/cse443-s12/slides/cse443-lecture-25-rop.pdf">Return Oriented Programming (PSU.edu)</a></li>
+</ul>
+
+<h4>
+<a id="difficulty-level-11" class="anchor" href="#difficulty-level-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difficulty Level</h4>
+
+<p>High, but varies depending on familiarity with the underlying technique of Return</p>
+
+<h4>
+<a id="potential-mentors-11" class="anchor" href="#potential-mentors-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Potential Mentors</h4>
+
+<ul>
+<li><code>ebeip90</code></li>
+<li><code>Idolf</code></li>
+<li><code>br0ns</code></li>
+</ul>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-1685543-11");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
