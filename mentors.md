@@ -16,9 +16,9 @@ Maintainer and developer of `pwntools`.
 
 ## Getting in Touch
 
-The best way to get ahold of us is on IRC!
+The best way to get ahold of us is on IRC! Feel free to join and introduce yourself, or ask any questions you may have!
+
 
 - IRC channel: `#pwning` on Freenode
 - Nicks: `ebeip90`, `IdolfHatler`, `br0ns`
-- 
-Feel free to join and introduce yourself, or ask any questions you may have!
+
