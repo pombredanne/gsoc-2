@@ -11,7 +11,8 @@ Additionally, specification of ABIs should allow direct invokation of syscalls a
 #### Skills Required
 
 - Python
-- Understands, or willing to learn about, exploiting Windows and Linux binaries with Return Oriented Programming
+- Assembly
+- Familiar with buffer overflows 
 
 #### Resources
 
