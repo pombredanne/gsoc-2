@@ -2,7 +2,7 @@
 
 # Pwntools & Binjitsu: Google Summer of Code
 
-Welcome to the Google Summer of Code landing page for the Pwntools and Binjitsu projects!
+Welcome to the [Google Summer of Code](https://developers.google.com/open-source/soc/?csw=1) landing page for the Pwntools and Binjitsu projects!
 
 You can find more information about the project, its mentors, project ideas, and how to get started below!
 
