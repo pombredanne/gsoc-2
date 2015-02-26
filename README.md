@@ -144,6 +144,7 @@ Low
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
 
 ### <a name="integration"></a>Extend Integration Testing Framework and Examples
 
@@ -174,6 +175,8 @@ Low to medium
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+
 ### <a name="elf"></a>Enhancements to `pwnlib.elf` module for editing ELFs
 
 Currently, the `pwnlib.elf` module has primitives to allow modifying arbitrary sections of the on-disk image of a loaded ELF file.  However, the limitations of the `pyelftools` library used to perform these operations prevents adding entire sections to the ELF binary, or adding relocations to it.
@@ -199,6 +202,8 @@ Medium
 - `ebeip90`
 - `Idolf`
 - `br0ns`
+
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
 
 ### <a name="mac"></a>Mac OS X Support
 
@@ -232,6 +237,8 @@ Medium
 
 - `ebeip90`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+
 ### <a name="pe"></a>Windows PE File Support
 
 Currently, `pwntools` and `binjitsu` have a lot of helper utilities for loading,
@@ -264,6 +271,8 @@ Medium
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+
 ### <a name="term"></a>Overhaul / re-write of the `pwnlib.term` module
 
 This module is currently the least-well-understood module and in its current form isn't documented or tested.
@@ -289,6 +298,8 @@ Low to medium
 - `ebeip90`
 - `Idolf`
 - `br0ns`
+
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
 
 ## <a name="exploits"></a>More Exploit Examples!
 
@@ -325,6 +336,8 @@ Varies wildly, from low to very high
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+
 ### <a name="shellcode"></a>Porting Shellcode to Pwntools
 
 Pwntools currently has a good deal of shellcode available in `pwnlib.shellcraft` for i386, amd64, and ARM.  However, there are lots of things that are missing (e.g. file-read, file-write, file descriptor proxying) which would be excellent additions to the corpus.
@@ -352,6 +365,8 @@ Low to Moderate
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+
 ### <a name="sigret"></a>SIGRET Exploitation Assitance
 
 Currently, `pwntools` is completely unaware of SIGRET-style ROP (SROP).  Helpers for generating valid register frames for use with SROP would be very useful.
@@ -378,6 +393,8 @@ Medium
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+
 ### <a name="format"></a>Format String Payload Generation
 
 Currently, `pwntools` is unable to offer any assistance in generation of format string payloads.  The open-source project `libformatstr` would serve as an excellent starting point for adding this functionality to pwntools.
@@ -403,6 +420,8 @@ Low to medium
 - `ebeip90`
 - `Idolf`
 - `br0ns`
+
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
 
 ### <a name="encoders"></a>Shellcode Encoders
 
@@ -433,6 +452,8 @@ Medium (port old encoder to current `pwntools`) to High (porting other encoders)
 - `ebeip90`
 - `Idolf`
 - `br0ns`
+
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
 
 ### <a name="ROP"></a>Multi-arch support for `pwnlib.rop`
 
