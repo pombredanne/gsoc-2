@@ -1,11 +1,8 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 ![](gsoc.png)
 
 # Pwntools & Binjitsu: Google Summer of Code
 
 Welcome to the [Google Summer of Code](https://developers.google.com/open-source/soc/?csw=1) landing page for the Pwntools and Binjitsu projects!
-
-<i class="fa fa-level-up"></i>
 
 You can find more information about the project, its mentors, project ideas, and how to get started below!
 
@@ -468,3 +465,4 @@ High, but varies depending on familiarity with the underlying technique of Retur
 - `Idolf`
 - `br0ns`
 
+[![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
