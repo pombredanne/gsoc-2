@@ -51,6 +51,10 @@ This is the current list of mentors for any Google Summer of Code projects.
 
 Maintainer and developer of the `binjitsu` fork, contributor to `pwntools`.
 
+- `ebeip90` on [Freenode](https://webchat.freenode.net/)
+- `ebeip90` on [Twitter](https://twitter.com/ebeip90)
+- `zachriggle` on [Github](https://github.com/zachriggle)
+
 ### [Mathias Svensson (Idolf)](https://github.com/Idolf)
 
 Maintainer and developer of `pwntools`.
