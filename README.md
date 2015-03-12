@@ -69,7 +69,7 @@ The best way to get ahold of us is on IRC! Feel free to join and introduce yours
 
 
 - IRC channel: `#pwning` on Freenode
-- Nicks: `ebeip90`, `IdolfHatler`, `br0ns`
+- Nicks: `ebeip90`, `Idolf`, `br0ns`
 
 
 ## Getting Started
