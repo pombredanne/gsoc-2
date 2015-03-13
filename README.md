@@ -86,7 +86,9 @@ Make sure to join `#pwntools` on Freenode amd ping one of the mentors.  You'll b
 
 ### Getting the Software
 
-Getting started with Binjitsu is easy!  If you're using Ubuntu, only a few commands away.
+Getting started with pwntools is easy!  If you're using Ubuntu, only a few commands away.
+
+For this example, we'll use the `binjitsu` fork of `pwntools`.
 
 ```
 $ apt-get install python2.7 python2.7-dev python-pip
