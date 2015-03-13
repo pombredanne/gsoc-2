@@ -76,6 +76,14 @@ The best way to get ahold of us is on IRC! Feel free to join and introduce yours
 
 Pwntools is designed to get you up and running as fast as possible!
 
+If you're a prospective GSoC student, you need to pick a project!  We've provided lots of ideas here, but you don't have to choose from there.  If you've got a great idea, we're open to it!
+
+You should also pick some *additional* projects.  Most of the ones cited here won't fill up your whole summer -- they're generally much smaller projects if you're smart and move fast.
+
+Once you've got an idea what you want to do with a project, follow the steps below to get everything installed, make sure it works, and get started hacking!
+
+Make sure to join `#pwntools` on Freenode amd ping one of the mentors.  You'll be given a very small, simple challenge to solve that's related to your project idea.  This will count as your patch that's required for your GSoC contribution.
+
 ### Getting the Software
 
 Getting started with Binjitsu is easy!  If you're using Ubuntu, only a few commands away.
