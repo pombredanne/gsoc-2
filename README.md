@@ -68,7 +68,7 @@ Maintainer and developer of `pwntools`.
 The best way to get ahold of us is on IRC! Feel free to join and introduce yourself, or ask any questions you may have!
 
 
-- IRC channel: `#pwning` on Freenode
+- IRC channel: `#pwntools` on Freenode
 - Nicks: `ebeip90`, `Idolf`, `br0ns`
 
 
