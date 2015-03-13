@@ -87,6 +87,19 @@ $ cd binjitsu
 $ pip install -e .
 ```
 
+#### Test Suite
+
+To make sure that everything installed correctly, we recommend running the test suite.
+
+To run the test suite, you should be running Ubuntu 12.04 or 14.04, and run the following commands. Be aware that this will add a user to your machine, and create a public key for SSH login!
+
+```sh
+bash .travis_install.sh
+bash .travis_ssh_setup.sh
+cd docs
+PWNLIB_NOTERM=1 make clean doctest
+```
+
 ### First Steps and Examples
 
 The online documentation has a [Getting Started](http://binjitsu.readthedocs.org/en/latest/intro.html) section for demonstrating some of the basic features.  More advanced use cases be found in the [write-ups](https://github.com/Gallopsled/pwntools-write-ups) repository, or [just by searching Google for `from pwn import *`](https://www.google.com/webhp#q=%22from+pwn+import%22)!
