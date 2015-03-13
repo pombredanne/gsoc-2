@@ -116,7 +116,7 @@ The online documentation has a [Getting Started](http://binjitsu.readthedocs.org
 
 ### Contributing and Source Control
 
-Both `pwntools` and `binjitsu` use [Github](https://github.com) for source control and [Travis CI](https://travis-ci.com) for automatic testing.
+Both `pwntools` uses [Github](https://github.com) for source control and [Travis CI](https://travis-ci.com) for automatic testing.
 
 Instructions on getting up and running with a local copy for development are available in [CONTRIBUTING.md](https://github.com/binjitsu/binjitsu/blob/master/CONTRIBUTING.md) for each project.
 
@@ -238,7 +238,7 @@ Medium
 
 ### <a name="mac"></a>Mac OS X Support
 
-Currently, `pwntools` and `binjitsu` work best on Linux distributions like Ubuntu.  
+Currently, `pwntools` works best on Linux distributions like Ubuntu.  
 However, lots of developers prefer to use alternate operating systems like Mac OS X,
 and some future challenges may even be written for it.
 
@@ -272,7 +272,7 @@ Medium
 
 ### <a name="pe"></a>Windows PE File Support
 
-Currently, `pwntools` and `binjitsu` have a lot of helper utilities for loading,
+Currently, `pwntools` has a lot of helper utilities for loading,
 parsing, and extracting information from Linux ELF files.  However, the same 
 level of support is not present for Windows PE files.
 
