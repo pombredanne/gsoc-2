@@ -11,7 +11,7 @@ You can find more information about the project, its mentors, project ideas, and
 - [Project Ideas](#project-ideas)
 - [Getting Started](#getting-started)
 
-## About Pwntools and Binjitsu [![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+## About Pwntools and Binjitsu
 
 ### What are binjitsu and pwntools?
 
@@ -43,7 +43,7 @@ One of the common post-competition activities for CTF is to post a write-up of t
 
 By making computer security and exploitation more approachable, we can enhance general awareness about common security-related mistakes which lead to memory corruption and eventually code execution.
 
-## Mentors [![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+## Mentors
 
 This is the current list of mentors for any Google Summer of Code projects.
 
@@ -72,7 +72,7 @@ The best way to get ahold of us is on IRC! Feel free to join and introduce yours
 - Nicks: `ebeip90`, `Idolf`, `br0ns`
 
 
-## Getting Started [![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+## Getting Started
 
 Pwntools is designed to get you up and running as fast as possible!
 
@@ -110,7 +110,7 @@ Both `pwntools` and `binjitsu` use [Github](https://github.com) for source contr
 
 Instructions on getting up and running with a local copy for development are available in [CONTRIBUTING.md](https://github.com/binjitsu/binjitsu/blob/master/CONTRIBUTING.md) for each project.
 
-## Project Ideas [![up](http://fa2png.io/static/images/level-up_808080_16.png)](#project-ideas)
+## Project Ideas
 
 This is the current list of ideas, sorted in general order of "easiest" to "hardest".
 
