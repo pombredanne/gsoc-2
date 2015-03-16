@@ -47,6 +47,8 @@ By making computer security and exploitation more approachable, we can enhance g
 
 This is the current list of mentors for any Google Summer of Code projects.
 
+If you have questions about pwntools GSoC, shoot on over to the [mailing list!](https://groups.google.com/forum/#!forum/pwntools-gsoc2015) and ask away :-).
+
 ### [Zach Riggle (ebeip90)](https://github.com/ZachRiggle)
 
 Maintainer and developer of the `binjitsu` fork, contributor to `pwntools`.
