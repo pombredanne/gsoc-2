@@ -1,8 +1,8 @@
 ![](gsoc.png)
 
-# Pwntools & Binjitsu: Google Summer of Code
+# Pwntools: Google Summer of Code
 
-Welcome to the [Google Summer of Code](https://developers.google.com/open-source/soc/?csw=1) landing page for the Pwntools and Binjitsu projects!
+Welcome to the [Google Summer of Code](https://developers.google.com/open-source/soc/?csw=1) landing page for the Pwntools project!
 
 You can find more information about the project, its mentors, project ideas, and how to get started below!
 
@@ -11,9 +11,9 @@ You can find more information about the project, its mentors, project ideas, and
 - [Project Ideas](#project-ideas)
 - [Getting Started](#getting-started)
 
-## About Pwntools and Binjitsu
+## About Pwntools
 
-### What are binjitsu and pwntools?
+### What is pwntools?
 
 [`pwntools`](https://pwntools.com) is an open-source, MIT-licensed framework for automating and aiding in the development of exploits for Capture The Flag (CTF) computer security competitions.  [`binjitsu`](https://binjit.su) is a fork of this project that is developed more rapidly, which contributes changes back to the main `pwntools` project.
 
