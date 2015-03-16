@@ -67,8 +67,9 @@ Maintainer and developer of `pwntools`.
 
 ## Getting in Touch
 
-The best way to get ahold of us is on IRC! Feel free to join and introduce yourself, or ask any questions you may have!
+The best way to get ahold of us is via the [mailing list](https://groups.google.com/forum/#!forum/pwntools-gsoc2015)! Feel free to join and introduce yourself, or ask any questions you may have!
 
+We're also available on IRC
 
 - IRC channel: `#pwntools` on Freenode
 - Nicks: `ebeip90`, `Idolf`, `br0ns`
