@@ -6,6 +6,8 @@ Welcome to the [Google Summer of Code](https://developers.google.com/open-source
 
 You can find more information about the project, its mentors, project ideas, and how to get started below!
 
+**Information on registration can be found [on the pwntools GSoC 2015 mailing list](https://groups.google.com/forum/#!topic/pwntools-gsoc2015/FJEivkS84U4).**
+
 - [About Pwntools](#about-pwntools-and-binjitsu)
 - [Mentors and Contact Information](#mentors)
 - [Project Ideas](#project-ideas)
