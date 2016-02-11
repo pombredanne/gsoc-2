@@ -1,3 +1,9 @@
+# GSOC 2015 Only
+
+This project is not participating in GSOC 2016.  This page is here only for posterity and to keep the ideas for future reference.
+
+
+
 <a name="top">
 ![](gsoc.png)
 
